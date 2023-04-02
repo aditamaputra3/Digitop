@@ -1,71 +1,75 @@
-<?php
-require 'actionRegister.php';
-
-if (isset($_POST["register"])) {
-  if (
-    register($_POST) >
-    0
-  ) {
-    echo "
-<script>
-  alert('User baru berhasil ditambahkan);
-</script>
-";
-    header("Location:login.php");
-  } else {
-    echo mysqli_error($koneksi);
-  }
-} ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <?php include 'header.php'; ?>
 
 <body>
   <div class="container mt-5">
-    <div class="row align-items-center">
-      <div class="col">
-        <img width="500" src="assets/register.png" alt="gambar" />
-      </div>
-      <div class="col">
-        <div class="mb-3 d-flex justify-content-center">
-          <h1>Register</h1>
-          <form action="" method="post">
-        </div>
-        <div class="mb-3">
-          <input placeholder="Username" type="text" class="form-control" name="username" id="username" required />
-        </div>
-        <div class="mb-3">
-          <input placeholder="Password" type="password" class="form-control" name="password" id="password" required />
-        </div>
-        <div class="mb-3">
-          <input placeholder="Re-Type Password" type="password" class="form-control" name="password2" id="password2" required />
-        </div>
-        <div class="mb-3">
-          <input placeholder="Alamat" type="text" class="form-control" name="alamat" id="alamat" required />
-        </div>
-        <div class="mb-3">
-          <select class="form-select" name="jenis_kelamin" id="jenis_kelamin" aria-label="Default select example" required>
-            <option value="Tidak Menyebutkan" selected>Jenis Kelamin</option>
-            <option value="Pria">Pria</option>
-            <option value="Wanita">Wanita</option>
-            <option value="Non-Binary">Non-Binary</option>
-            <option value="Lorem-Ipsum">Lorem Ipsum</option>
-          </select>
-        </div>
-        <div class="mb-3 d-grid gap-2">
-          <button action="submit" name="register" class="btn btn-dark">Register</button>
-        </div>
-        <div class="mb-3 d-flex justify-content-center">
-            Sudah Memiliki Akun? <a href="login.php" class="link-primary"> Login</a>
+    <?php
+    require 'actionRegister.php';
+
+    if (isset($_POST["register"])) {
+      $result = register($_POST);
+      if ($result > 0) {
+        echo '<div class="alert alert-danger" role="alert">
+            Gagal menambahkan user baru: ' . mysqli_error($koneksi) . '
+          </div>';
+        header("Location:register.php");
+        exit();
+      } else {
+        echo '<div class="alert alert-danger" role="alert">
+            Gagal menambahkan user baru: ' . mysqli_error($koneksi) . '
+          </div>';
+        exit();
+      }
+    }
+    ?>
+    <div class="row align-items-center justify-content-center">
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h1 class="text-center">Register</h1>
           </div>
-        </form>
+          <div class="card-body">
+            <form action="" method="post">
+              <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" class="form-control" name="username" id="username" required>
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" name="password" id="password" required>
+              </div>
+              <div class="mb-3">
+                <label for="password2" class="form-label">Re-Type Password</label>
+                <input type="password" class="form-control" name="password2" id="password2" required>
+              </div>
+              <div class="mb-3">
+                <label for="alamat" class="form-label">Alamat</label>
+                <input type="text" class="form-control" name="alamat" id="alamat" required>
+              </div>
+              <div class="mb-3">
+                <label for="jenis_kelamin" class="form-label">Jenis Kelamin</label>
+                <select class="form-select" name="jenis_kelamin" id="jenis_kelamin" aria-label="Default select example" required>
+                  <option value="Tidak Menyebutkan" selected disabled>Jenis Kelamin</option>
+                  <option value="Pria">Pria</option>
+                  <option value="Wanita">Wanita</option>
+                  <option value="Non-Binary">Non-Binary</option>
+                  <option value="Lorem-Ipsum">Lorem Ipsum</option>
+                </select>
+              </div>
+              <div class="mb-3 d-grid gap-2">
+                <button type="submit" name="register" class="btn btn-dark">Register</button>
+              </div>
+              <div class="mb-3 text-center">
+                Sudah Memiliki Akun? <a href="login.php" class="link-primary"> Login</a>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <script type="text/javascript" src="sweetalert.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <?php include 'scripts.php'; ?>
 </body>
 
 </html>

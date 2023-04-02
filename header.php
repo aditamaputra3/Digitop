@@ -10,4 +10,5 @@
     <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300&family=Nunito&family=PT+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/css/custom.css">
     <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet" />
+
 </head>

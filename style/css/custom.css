@@ -17,3 +17,11 @@
     margin-left: 0 !important;
   }
 }
+
+.alert-fixed {
+  position: fixed;
+  top: 100;
+  left: 100;
+  width: 80%;
+  z-index: 9999;
+}
