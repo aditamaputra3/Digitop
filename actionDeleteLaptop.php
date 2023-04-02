@@ -6,11 +6,11 @@
       header("Location: login.php");
     }
     
-    $id_produk = $_GET['id_produk'];
+    $id_laptop = $_GET['id_laptop'];
 
-    $query = "DELETE FROM produk WHERE id_produk='$id_produk'";
+    $query = "DELETE FROM laptop WHERE id_laptop='$id_laptop'";
     mysqli_query($koneksi,$query);
 
-    header("location:viewProduk.php");
+    header("location:viewLaptop.php");
     die();
 ?>
