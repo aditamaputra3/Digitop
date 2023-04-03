@@ -8,7 +8,7 @@ $merek = $_POST["merek"];
 $harga = $_POST["harga"];
 $layar = $_POST["layar"];
 $ram = $_POST["ram"];
-$harga = $_POST["prosecor"];
+$prosecor = $_POST["prosecor"];
 $memory = $_POST["memory"];
 $tanggal_rilis = $_POST["tanggal_rilis"];
 

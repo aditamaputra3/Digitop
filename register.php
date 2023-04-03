@@ -11,54 +11,59 @@
       $result = register($_POST);
       if ($result > 0) {
         echo '<div class="alert alert-danger" role="alert">
-            Gagal menambahkan user baru: ' . mysqli_error($koneksi) . '
-          </div>';
+        Gagal menambahkan user baru: ' . mysqli_error($koneksi) . '
+      </div>';
         header("Location:register.php");
         exit();
       } else {
-        echo '<div class="alert alert-danger" role="alert">
-            Gagal menambahkan user baru: ' . mysqli_error($koneksi) . '
-          </div>';
-        exit();
+        if ($result) {
+          echo '<div class="alert alert-success" role="alert">
+              Berhasil menambahkan user baru.
+            </div>';
+        } else {
+          echo '<div class="alert alert-danger" role="alert">
+              Gagal menambahkan user baru: ' . mysqli_error($koneksi) . '
+            </div>';
+        }
       }
     }
     ?>
+
     <div class="row align-items-center justify-content-center">
       <div class="col-md-4">
         <div class="card">
           <div class="card-body">
-            <h1 class="text-center">Register</h1>
-          </div>
-          <div class="card-body">
+            <h2 class="text-center">Register</h2>
             <form action="" method="post">
-              <div class="mb-3">
+              <div class="mb-3 form-floating">
+                <input type="text" class="form-control form-control-sm" name="username" id="username" placeholder="Username" required>
                 <label for="username" class="form-label">Username</label>
-                <input type="text" class="form-control" name="username" id="username" required>
               </div>
-              <div class="mb-3">
+              <div class="mb-3 form-floating">
+                <input type="password" class="form-control form-control-sm" name="password" id="password" placeholder="Password" required>
                 <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control" name="password" id="password" required>
               </div>
-              <div class="mb-3">
+              <div class="mb-3 form-floating">
+                <input type="password" class="form-control form-control-sm" name="password2" id="password2" placeholder="Re-Type Password" required>
                 <label for="password2" class="form-label">Re-Type Password</label>
-                <input type="password" class="form-control" name="password2" id="password2" required>
               </div>
-              <div class="mb-3">
+              <div class="mb-3 form-floating">
+                <input type="text" class="form-control form-control-sm" name="alamat" id="alamat" placeholder="Alamat" required>
                 <label for="alamat" class="form-label">Alamat</label>
-                <input type="text" class="form-control" name="alamat" id="alamat" required>
               </div>
-              <div class="mb-3">
-                <label for="jenis_kelamin" class="form-label">Jenis Kelamin</label>
+              <div class="mb-3 form-floating">
                 <select class="form-select" name="jenis_kelamin" id="jenis_kelamin" aria-label="Default select example" required>
-                  <option value="Tidak Menyebutkan" selected disabled>Jenis Kelamin</option>
+                  <option value="Tidak Menyebutkan" selected disabled>Pilih Jenis Kelamin</option>
                   <option value="Pria">Pria</option>
                   <option value="Wanita">Wanita</option>
                   <option value="Non-Binary">Non-Binary</option>
                   <option value="Lorem-Ipsum">Lorem Ipsum</option>
                 </select>
+                <label for="jenis_kelamin" class="form-label form-label-sm">Jenis Kelamin</label>
               </div>
               <div class="mb-3 d-grid gap-2">
                 <button type="submit" name="register" class="btn btn-dark">Register</button>
+                <a href="index.php" class="btn btn-secondary">Kembali ke Halaman Utama</a>
               </div>
               <div class="mb-3 text-center">
                 Sudah Memiliki Akun? <a href="login.php" class="link-primary"> Login</a>

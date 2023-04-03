@@ -1,11 +1,6 @@
 <?php
 include 'koneksi.php';
 
-session_start();
-if (!isset($_SESSION["login"])) {
-  header("Location: login.php");
-}
-
 $query = 'SELECT * FROM laptop';
 $result = mysqli_query($koneksi, $query);
 ?>
@@ -16,14 +11,13 @@ $result = mysqli_query($koneksi, $query);
 <?php include 'header.php'; ?>
 
 <body>
-  <?php include 'navbar2.php'; ?>
+  <?php include 'navbar.php'; ?>
   <div class="container mt-4">
-
     <h1>Data Laptop</h1>
     <div class="mb-5">
       <a href="tambahLaptop.php" class="btn btn-primary" role="button">Tambah Data</a>
     </div>
-    <table class="table table-striped">
+    <table class="table table-striped dt-responsive nowrap" style="width:100%" id="example">
       <thead>
         <tr>
           <th>Id Laptop</th>

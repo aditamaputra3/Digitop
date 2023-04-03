@@ -4,7 +4,7 @@
 <?php include 'header.php'; ?>
 
 <body>
-  <?php include 'navbar.php'; ?>
+  <?php include 'navbar2.php'; ?>
   <!-- <div class="container">
       <div class="row">
         <div

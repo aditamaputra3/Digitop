@@ -10,5 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300&family=Nunito&family=PT+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/css/custom.css">
     <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet" />
-
+    <link href="https://cdn.datatables.net/v/dt/dt-1.13.4/datatables.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css00" rel="stylesheet"/>
+    <link href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css" rel="stylesheet"/>
+    <link href="https://cdn.datatables.net/rowreorder/1.3.3/css/rowReorder.bootstrap5.min.css" rel="stylesheet"/>
 </head>

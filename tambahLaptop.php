@@ -1,10 +1,6 @@
 <?php
 include 'koneksi.php';
 
-session_start();
-    if(!isset($_SESSION["login"])){
-      header("Location: login.php");
-    }
 ?>
 
 <!DOCTYPE html>
@@ -13,9 +9,9 @@ session_start();
 <?php include 'header.php'; ?>
 
 <body>
-    <?php include 'navbar2.php'; ?>
+    <?php include 'navbar.php'; ?>
     <div class="container mt-4">
-        <form class="row g-3" action="actionInput.php" method="post">
+        <form class="row g-3" action="actionInputLaptop.php" method="post">
             <h1>Form Tambah Laptop</h1>
             <div class="col">
             <div class="mb-3">
@@ -73,6 +69,7 @@ session_start();
             
         </form>
     </div>
+    <?php include 'scripts.php'; ?>
 </body>
 
 </html>

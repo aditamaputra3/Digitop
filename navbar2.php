@@ -1,3 +1,4 @@
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <div class="container">
         <a class="navbar-brand" href="index.php"><img width="140" src="assets/digitop.png" /></a>
@@ -8,12 +9,6 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="index.php">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="viewLaptop.php">Laptop</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="viewSuplier.php">Suplier</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -35,7 +30,8 @@
                     </div>
                 </li>
             </ul>
-            <a class="btn btn-danger btn-xl" href="logout.php" role="button">Log-out</a>
+            <a class="btn btn-outline-light ms-5" href="login.php" role="button">Login</a>
+            <a class="btn btn-outline-light ms-2" href="register.php" role="button">SignUp</a>
         </div>
     </div>
 </nav>

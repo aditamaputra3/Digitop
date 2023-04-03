@@ -7,4 +7,8 @@ function showPass() {
   }
 }
 
+$(document).ready(function () {
+  $('#example').DataTable();
+});
+
 

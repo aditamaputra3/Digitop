@@ -1,3 +1,13 @@
+<?php
+include 'koneksi.php';
+session_start();
+if(isset($_SESSION["login"])){
+  $username = $_SESSION["username"]; // Mengambil nilai username dari session
+} else {
+  header("Location: login.php"); // Jika user belum login, kembalikan ke halaman login
+  exit;
+}
+?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <div class="container">
         <a class="navbar-brand" href="index.php"><img width="140" src="assets/digitop.png" /></a>
@@ -28,9 +38,35 @@
                         <a class="dropdown-item" href="#">Indonesia</a>
                     </div>
                 </li>
+                <?php if(isset($_SESSION["login"])) { ?>
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="viewLaptop.php">Laptop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="viewSupplier.php">Supplier</a>
+                    </li>
+                </ul>
             </ul>
-            <a class="btn btn-outline-light ms-5" href="login.php" role="button">Login</a>
-            <a class="btn btn-outline-light ms-2" href="register.php" role="button">SignUp</a>
+          
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <?php echo "Welcome!,  ", $_SESSION["username"]; ?>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="logout.php">Logout</a></li>
+                    </ul>
+                </div>
+                
+                <?php
+            } else {
+                ?>
+                <a class="btn btn-outline-light ms-5" href="login.php" role="button">Login</a>
+                <a class="btn btn-outline-light ms-2" href="register.php" role="button">SignUp</a>
+                <?php
+            }
+            ?>
         </div>
     </div>
 </nav>

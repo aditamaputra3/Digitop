@@ -1,11 +1,6 @@
 <?php
 include 'koneksi.php';
 
-session_start();
-if (!isset($_SESSION["login"])) {
-  header("Location: login.php");
-}
-
 $id_laptop = $_GET['id_laptop'];
 
 $query = "SELECT * FROM laptop WHERE id_laptop='$id_laptop'";
@@ -18,7 +13,7 @@ $result = mysqli_query($koneksi, $query);
 <?php include 'header.php'; ?>
 
 <body>
-  <?php include 'navbar2.php'; ?>
+  <?php include 'navbar.php'; ?>
   <div class="container mt-4">
     <?php while ($row = mysqli_fetch_assoc($result)) : ?>
       <form action="actionEditLaptop.php" method="POST" class="row g-3">
@@ -94,6 +89,7 @@ $result = mysqli_query($koneksi, $query);
       </form>
     <?php endwhile; ?>
   </div>
+  <?php include 'scripts.php'; ?>
 </body>
 
 </html>
