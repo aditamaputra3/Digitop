@@ -8,7 +8,11 @@ function showPass() {
 }
 
 $(document).ready(function () {
-  $('#example').DataTable();
+  $('#myTable').DataTable();
 });
+
+$('#myTable').DataTable( {
+  responsive: true
+} );
 
 

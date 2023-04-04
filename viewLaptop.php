@@ -15,9 +15,9 @@ $result = mysqli_query($koneksi, $query);
   <div class="container mt-4">
     <h1>Data Laptop</h1>
     <div class="mb-5">
-      <a href="tambahLaptop.php" class="btn btn-primary" role="button">Tambah Data</a>
+      <a href="tambahLaptop.php" class="btn btn-outline-primary" role="button">Tambah Data</a>
     </div>
-    <table class="table table-striped dt-responsive nowrap" style="width:100%" id="example">
+    <table class="table table-striped responsive nowrap" style="width:100%" id="myTable">
       <thead>
         <tr>
           <th>Id Laptop</th>

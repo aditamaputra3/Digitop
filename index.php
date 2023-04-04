@@ -45,8 +45,7 @@
       </div>
     </div> -->
 
-  <section class="herobwa mt-5">
-    <div class="container">
+  <div class="container mt-5">
       <div class="row">
         <div class="col align-self-center">
           <h1 class="mb-4">Cari Laptop Murah dan Terpercaya?</h1>
@@ -59,10 +58,9 @@
         </div>
         <div class="col d-none d-sm-block">
           <img width="560" src="assets/laptop.png" alt="gambar" />
-        </div>
       </div>
     </div>
-  </section>
+  </div>
 
   <div class="container">
   <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
