@@ -4,46 +4,7 @@
 <?php include 'header.php'; ?>
 
 <body>
-  <?php include 'navbar2.php'; ?>
-  <!-- <div class="container">
-      <div class="row">
-        <div
-          id="carouselExampleRide"
-          class="carousel slide"
-          data-bs-ride="true"
-        >
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="assets/c1.jpg" class="d-block w-100" alt="..." />
-            </div>
-            <div class="carousel-item">
-              <img src="assets/c2.jpg" class="d-block w-100" alt="..." />
-            </div>
-            <div class="carousel-item">
-              <img src="assets/c1.jpg" class="d-block w-100" alt="..." />
-            </div>
-          </div>
-          <button
-            class="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExampleRide"
-            data-bs-slide="prev"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button
-            class="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselExampleRide"
-            data-bs-slide="next"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-      </div>
-    </div> -->
+  <?php include 'navbar.php'; ?>
 
   <div class="container mt-5">
       <div class="row">
@@ -54,7 +15,7 @@
             mulai dari apple hingga asus. Dapatkan penawaran terbaik hanya
             di DigiTop garansi resmi terjamin 100%.
           </p>
-          <a class="btn btn-dark" href="#" role="button">Get Starterd</a>
+          <a class="btn btn-dark" href="listLaptop.php" role="button">Beli Sekarang</a>
         </div>
         <div class="col d-none d-sm-block">
           <img width="560" src="assets/laptop.png" alt="gambar" />

@@ -1,5 +1,12 @@
 <?php
 include 'koneksi.php';
+session_start();
+if(isset($_SESSION["login"])){
+  $username = $_SESSION["username"]; // Mengambil nilai username dari session
+} else {
+  header("Location: login.php"); // Jika user belum login, kembalikan ke halaman login
+  exit;
+}
 
 $id_suplier = $_GET['id_suplier'];
 
