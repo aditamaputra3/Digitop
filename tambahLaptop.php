@@ -1,11 +1,11 @@
 <?php
 include 'koneksi.php';
 session_start();
-if(isset($_SESSION["login"])){
-  $username = $_SESSION["username"]; // Mengambil nilai username dari session
+if (isset($_SESSION["login"])) {
+    $username = $_SESSION["username"]; // Mengambil nilai username dari session
 } else {
-  header("Location: login.php"); // Jika user belum login, kembalikan ke halaman login
-  exit;
+    header("Location: login.php"); // Jika user belum login, kembalikan ke halaman login
+    exit;
 }
 ?>
 <!DOCTYPE html>
@@ -40,11 +40,11 @@ if(isset($_SESSION["login"])){
                 </div>
 
                 <div class="form-floating mb-3">
-                    <input type="text" name="layar" id="layar" class="form-control" placeholder=" " required>
+                    <input type="number" name="layar" id="layar" class="form-control" placeholder=" " required>
                     <label for="layar">Layar</label>
                 </div>
             </div>
-                <div class="col">
+            <div class="col">
                 <div class="form-floating mb-3">
                     <input type="number" name="ram" id="ram" class="form-control" placeholder=" " required>
                     <label for="ram">RAM</label>
@@ -64,7 +64,7 @@ if(isset($_SESSION["login"])){
                     <input type="date" name="tanggal_rilis" id="tanggal_rilis" class="form-control" placeholder=" " required>
                     <label for="tanggal_rilis">Tanggal Rilis</label>
                 </div>
-                </div>
+            </div>
             <div class="mb-3">
                 <button type="submit" class="btn btn-primary">Simpan</button>
             </div>

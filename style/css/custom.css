@@ -1,21 +1,17 @@
-.herobwa h1 {
+body{
+  font-family: "PT Sans", sans-serif;
+}
+
+#indexH1 {
   font-family: "Inria Sans", sans-serif;
   font-weight: 700;
   color: #2f281e;
 }
 
-.herobwa p {
+#indexP {
   font-family: "PT Sans", sans-serif;
   font-weight: 400;
   color: #2f281e;
-}
-
-@media only screen and (max-width: 768px) {
-  .btn-primary,
-  .btn-secondary {
-    margin-top: 10px;
-    margin-left: 0 !important;
-  }
 }
 
 .alert-fixed {
